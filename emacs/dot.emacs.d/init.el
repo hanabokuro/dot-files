@@ -8,3 +8,5 @@
 (setq init-loader-default-regexp "\\(?:^[[:digit:]]\\{2\\}\\).*\\.el\$") ;; default だと *.el~ も対象になってしまう。
 (init-loader-load "~/.emacs.d/conf")
 (put 'narrow-to-region 'disabled nil)
+
+(load-library "personal-setting.el")
