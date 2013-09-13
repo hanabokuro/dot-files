@@ -1,4 +1,4 @@
-(require 'git-gutter)
+(el-get 'sync 'git-gutter)
 (global-git-gutter-mode t)
 
 (global-set-key (kbd "C-x v =") 'git-gutter:popup-hunk)

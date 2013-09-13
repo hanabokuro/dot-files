@@ -6,4 +6,4 @@
 ;; C-c C-u  goto unread
 ;;
 
-(require 'riece)
+(el-get 'sync 'riece)

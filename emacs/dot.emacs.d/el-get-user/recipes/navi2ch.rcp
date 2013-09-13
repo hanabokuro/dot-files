@@ -1,0 +1,6 @@
+(:name navi2ch
+ :type http-tar
+ :options ("xzf")
+ :description "2ch reader"
+ :url "https://sourceforge.net/projects/navi2ch/files/navi2ch/navi2ch-1.8.4/navi2ch-1.8.4.tar.gz/download"
+)

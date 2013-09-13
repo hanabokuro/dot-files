@@ -1,5 +1,5 @@
 ;; color-theme
-(require 'color-theme)
+(el-get 'sync 'color-theme)
 (color-theme-initialize)
 ;; (color-theme-robin-hood)
 ;; (color-theme-clarity) ;; for putty 256mode

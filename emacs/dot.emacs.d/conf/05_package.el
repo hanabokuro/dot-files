@@ -5,9 +5,4 @@
 
 (package-initialize)
 
-;; how to install melpa
-;; (progn
-;;   (switch-to-buffer (url-retrieve-synchronously "https://raw.github.com/milkypostman/melpa/master/melpa.el"))
-;;  (package-install-from-buffer  (package-buffer-info) 'single))
-
 (require 'melpa)

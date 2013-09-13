@@ -1,5 +1,5 @@
 (setq escreen-prefix-char "\C-x\C-\\")
-(require 'escreen)
+(el-get 'sync 'escreen)
 (escreen-install)
 
 (and

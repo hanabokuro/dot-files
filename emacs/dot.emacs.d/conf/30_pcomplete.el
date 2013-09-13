@@ -1,1 +1,1 @@
-(require 'pcmpl-git)
+(el-get 'sync 'pcmpl-git)

@@ -1,0 +1,5 @@
+(:name init-loader
+ :type git
+ :description "Loader of configuration files"
+ :url "https://github.com/emacs-jp/init-loader.git"
+)

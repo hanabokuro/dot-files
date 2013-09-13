@@ -7,6 +7,7 @@
 ;;
 ;;
 
+(el-get 'sync 'helm)
 (require 'helm-config)
 
 (global-set-key "\C-xb" 'helm-mini)
