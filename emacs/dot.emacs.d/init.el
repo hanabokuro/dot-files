@@ -6,8 +6,6 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;; M-x el-get-elpa-build-local-recipes
-
 ;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
@@ -18,6 +16,8 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+
+(unless (file-exists-p "~/.emacs.d/elpa") (el-get-elpa-build-local-recipes))
 
 ;; init-loader
 (el-get 'sync 'init-loader)
