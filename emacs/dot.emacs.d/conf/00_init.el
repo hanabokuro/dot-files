@@ -27,5 +27,3 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 (set-exec-path-from-shell-PATH)
-
-(set-frame-size (selected-frame) 190 50)
