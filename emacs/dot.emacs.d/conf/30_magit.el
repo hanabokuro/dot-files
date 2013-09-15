@@ -65,6 +65,8 @@
 ;; f      fetch
 ;; F      pull
 ;;
+;;;;;;;;;;;;;;;; remote ;;;;;;;;;;;;;;;;
+;; M        popup remote menu
 ;;;;;;;;;;;;;;;; annoate ;;;;;;;;;;;;;;;;
 ;; C-x v g  vc-annotate
 ;; l               vc-annotate-show-log-revision-at-line
