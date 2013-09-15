@@ -1,0 +1,5 @@
+(:name dmacro
+       :type http
+       :website "http://www.pitecan.com/DynamicMacro/"
+       :description "detect repeatable operation and repeat it"
+       :url "http://www.pitecan.com/papers/JSSSTDmacro/dmacro.el")
