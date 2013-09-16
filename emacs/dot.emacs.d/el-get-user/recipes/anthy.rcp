@@ -1,0 +1,11 @@
+(:name anthy
+ :type http-tar
+ :options ("xzf")
+ :description "Anthy is a system for Japanese input method"
+ :url "http://iij.dl.sourceforge.jp/anthy/37536/anthy-9100h.tar.gz"
+ :build `(
+          ("./configure" ,(concat "--prefix=" (el-get-package-directory 'anthy) "/usr/local" ))
+          ("make" "install")
+         )
+)
+

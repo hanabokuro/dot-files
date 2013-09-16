@@ -1,0 +1,4 @@
+(:name tamago
+       :description "Tamago (EGG) Input Method Architecture for Emacs"
+       :type github
+       :pkgname "hanabokuro/tamago")
