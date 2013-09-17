@@ -14,6 +14,12 @@
 ;; ts      wl-thread-set-parent
 ;;
 
+;; change folder format from 'user@server' to 'user%server'.
+;; to allow user name like 'foo@gmail.com'.
+(setq elmo-net-folder-name-syntax '((?% [server ".+"])
+                                    (?: [port "^[0-9]+$"])
+                                    (?! stream-type)))
+
 (el-get 'sync 'wanderlust)
 (setq wl-news-news-alist nil)
 (setq wl-use-toolbar nil)
