@@ -23,8 +23,5 @@
 (el-get 'sync 'wanderlust)
 (setq wl-news-news-alist nil)
 (setq wl-use-toolbar nil)
-(setq elmo-net-folder-name-syntax '((?% [server ".+"])
-                                    (?: [port "^[0-9]+$"])
-                                    (?! stream-type)))
 (autoload 'wl         "wl"         "Wanderlust" t)
 (autoload 'elmo-split "elmo-split" "Split messages on the folder." t)
