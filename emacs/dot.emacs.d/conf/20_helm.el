@@ -16,7 +16,6 @@
 (require 'helm-config)
 
 (helm-mode 1)
-; (define-key helm-map (kbd "C-i") 'undefined)
 
 (add-hook 'eshell-mode-hook
           #'(lambda ()
@@ -24,32 +23,22 @@
                 [remap eshell-pcomplete]
                 'helm-esh-pcomplete)))
 
+;; king ring
 (global-set-key "\M-\C-y" 'helm-show-kill-ring)
 
+;; find file
 (add-to-list 'helm-completing-read-handlers-alist '(find-file . nil))
 (global-set-key "\C-c\C-f" ' helm-find-files)
 
-
-(defvar my-helm-source-calculation-result
-  '((name . "Calculation Result")
-    (dummy)
-    (type . 'string)
-    (filtered-candidate-transformer . (lambda (candidates source)
-                                        (list
-                                         (condition-case nil
-                                             (with-helm-current-buffer (calc-eval helm-pattern))
-                                           (error "Error")))))
-    (action . (("Copy result to kill-ring" . kill-new)))
-))
-
+;; other buffer
+(setq my-helm-source-list-for-helm-other-buffer '(
+                                                  helm-source-buffers-list
+                                                  helm-source-recentf
+                                                  helm-source-buffer-not-found
+                                                  ))
 (global-set-key "\C-xb" '(lambda ()
                            (interactive)
                            (require 'helm-files)
-                           (helm-other-buffer '(
-                                                helm-source-buffers-list
-                                                helm-source-recentf
-                                                helm-source-buffer-not-found
-                                                my-helm-source-calculation-result
-                                                )
-                                              "*helm mini*")))
-
+                           (helm-other-buffer
+                            my-helm-source-list-for-helm-other-buffer
+                            "*helm mini*")))
