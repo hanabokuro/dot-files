@@ -25,9 +25,7 @@
 (init-loader-load "~/.emacs.d/conf")
 
 ;; load personal setting
-(let ((personal-dir "~/.emacs.d/personal"))
-  (and (file-exists-p personal-dir) (mapc 'load (directory-files personal-dir :full-path "^[^#].*\\.elc?$"))))
-
+(and (file-exists-p "~/.emacs.d/personal") (init-loader-load "~/.emacs.d/personal"))
 
 ;; other setting
 (put 'narrow-to-region 'disabled nil)
