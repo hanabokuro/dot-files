@@ -8,4 +8,4 @@
 (global-set-key (kbd "C-x n") 'git-gutter:next-hunk)
 
 ;; Revert current hunk
-(global-set-key (kbd "C-x r") 'git-gutter:revert-hunk)
+(global-set-key (kbd "C-x R") 'git-gutter:revert-hunk)
