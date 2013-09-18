@@ -1,10 +1,12 @@
+;; https://github.com/emacs-helm/helm/wiki
 ;;
-;; @		helm will search for text matching this pattern INSIDE the buffer (i.e not in the name of buffer).
 ;; Left		Previous Source
 ;; Right	 Next Source
 ;;
 ;; M-x helm-locate
 ;;
+;;
+;; @helm-grep
 ;;
 ;; @helm-find-files
 ;; C-. or C-l         go up directory
@@ -16,7 +18,7 @@
 (require 'helm-config)
 
 (helm-mode 1)
-(define-key helm-read-file-map (kbd "<tab>") 'helm-execute-persistent-action)
+(define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 (add-hook 'eshell-mode-hook
           #'(lambda ()
