@@ -16,6 +16,7 @@
 (require 'helm-config)
 
 (helm-mode 1)
+(define-key helm-read-file-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 (add-hook 'eshell-mode-hook
           #'(lambda ()
