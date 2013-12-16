@@ -1,3 +1,4 @@
+(el-get 'sync 'cperl-mode)
 (defalias 'perl-mode 'cperl-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
