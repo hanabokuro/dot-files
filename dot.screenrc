@@ -1,0 +1,75 @@
+# 通常は
+#   alias s='[ $TERM != "screen" ] && screen -D -RR'
+# しておいて、常に s が幸せ
+
+
+#
+# C-x ?     : show help
+#
+# C-x d     : detach
+#
+# C-x c     : create new screen
+# C-x A     : set session name
+# C-x k     : kill screen
+#
+# <RIGHT>   : move to next screen
+# <LEFT>    : move to previous screen
+#
+# C-x 2     : split window
+# C-x 1     : delete other windows
+# C-x o     : move to next window
+# C-x b     : list buffers
+#
+# C-x +     : enlarge window
+# C-x -     : shrink window
+# C-x =     : resize all to same size
+#
+# C-x k     : copy to kill-ring
+# C-x y     : yank
+#
+# C-x C-[   : enter copy mode
+
+
+startup_message off
+autodetach on
+shell -$SHELL
+defhstatus "^En:^Et"
+
+term screen-256color
+
+# see STRING ESCAPES chapter
+# caption always "[%Y/%m/%d %c:%s]%h"
+caption always "%{.BW} >> (%n %t) %h"
+# hardstatus alwayslastline "%-w%{=br}%n %t%{-}%+w"
+hardstatus alwayslastline "%{=u Wr}[%Y-%m-%d %02c%{-u Wr}] %{Wk}%-w%{BW}%n %t%{-}%+w"
+
+multiuser on
+
+escape ^x^x
+zombile ^[
+
+bindkey -k kr next
+bindkey -k kl  prev
+bindkey -k ku  focus
+bindkey -k kd  focus
+
+bind -c REGION 2 split
+bind -c REGION 1 only
+bind -c REGION 0 remove
+bind -c REGION o focus
+bind b windowlist -b
+bind "^x" command -c REGION
+bind 2 split
+bind 1 only
+bind 0 remove
+bind o focus
+bind '^' resize
+bind + resize +1
+bind - resize -1
+bind = resize =
+
+bind "^k" eval "copy" "stuff ' $ '"
+# yank
+bind "^y" paste .
+
+markkeys 'h=^B:l=^F:$=^E:^d=^v:^D=^z'
