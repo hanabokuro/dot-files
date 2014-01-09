@@ -14,6 +14,7 @@
 ;; C-c ?              show help
 ;;
 
+(setq helm-command-prefix-key "C-x C") ;; default is C-x c. but it will be bound to smarter-compile.
 (el-get 'sync 'helm)
 (require 'helm-config)
 
