@@ -1,0 +1,4 @@
+(:name redo+
+ :type http
+ :url "http://www.emacswiki.org/emacs/download/redo%2b.el"
+)
