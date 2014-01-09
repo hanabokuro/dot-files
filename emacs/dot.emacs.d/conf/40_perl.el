@@ -1,3 +1,4 @@
+(el-get 'sync 'cperl-mode)
 (defalias 'perl-mode 'cperl-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -20,6 +21,7 @@
 (add-hook 'cperl-mode-hook '(lambda ()
                               (setq indent-tabs-mode nil)
                               (local-set-key "\C-j" 'dabbrev-expand)
+                              (local-set-key "\C-c\C-f" ' helm-find-files)
 ;;;;;                  (flymake-mode)
                               ))
 

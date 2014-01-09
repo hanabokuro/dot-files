@@ -7,3 +7,4 @@
 
 (global-set-key [left]  'elscreen-previous)
 (global-set-key [right] 'elscreen-next)
+(global-set-key "\C-c0" '(lambda () (interactive) (elscreen-jump-0)))

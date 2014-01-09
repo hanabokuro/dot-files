@@ -2,4 +2,6 @@
        :description "Emacs port of GitGutter Sublime Text 2 Plugin"
        :website "https://github.com/syohex/emacs-git-gutter"
        :type github
-       :pkgname "syohex/emacs-git-gutter")
+       :pkgname "hanabokuro/emacs-git-gutter"
+       :branch "dev/check-file-is-non-nil-at-git-gutter-diff"
+       )
