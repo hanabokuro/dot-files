@@ -15,10 +15,14 @@
     (insert-string ret)
     )
   )
+
 (defun escape (start end)
   (interactive "r")
-  (let (src _isacii _escape)
-    (setq src (buffer-substring-no-properties start end))
+  (insert-string "\n")
+  (insert-string (escape-string (buffer-substring-no-properties start end))))
+
+(defun escape-string (src)
+  (let (_isascii _escape)
     (setq _isascii '(lambda (c)
           (cond
            ((and (<= ?A c)(<= c ?Z)) t)
@@ -33,7 +37,16 @@
                           (funcall _escape (cdr l))
                           )
                          ))))
-    (insert-string "\n")
-    (insert-string (eval (cons 'concat (funcall _escape (string-to-list src)))))
+    (eval (cons 'concat (funcall _escape (string-to-list src))))
 ))
 
+(defun search-at-google ()
+  (interactive)
+
+  (let (keyword)
+    (setq keyword (if (region-active-p)
+                      (buffer-substring-no-properties (region-beginning) (region-end))
+                    (or (thing-at-point 'symbol) (thing-at-point 'word) "")))
+    (setq keyword (read-string (format "Search at google with [%s]" keyword) nil nil keyword))
+    (browse-url (format "http://www.google.co.jp/search?q=%s" (escape-string keyword)))
+))
