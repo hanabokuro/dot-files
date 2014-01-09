@@ -20,7 +20,6 @@
 (add-hook 'cperl-mode-hook '(lambda ()
                               (setq indent-tabs-mode nil)
                               (local-set-key "\C-j" 'dabbrev-expand)
-                              (local-set-key "\C-c\C-f" 'anything-project)
 ;;;;;                  (flymake-mode)
                               ))
 
