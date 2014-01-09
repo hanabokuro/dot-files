@@ -1,3 +1,10 @@
+;;
+;; 補完中にC-sを押すことで絞り込みを開始
+;;
+;;
+;;
+;;
+
 (el-get 'sync 'auto-complete)
 
 (setq ac-menu-height 40)
