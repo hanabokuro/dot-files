@@ -28,3 +28,4 @@
 
 (global-set-key [up] '(lambda () (interactive) (other-window -1)))
 (global-set-key [down] 'other-window)
+(global-set-key (kbd "C-x G") 'search-at-google)
