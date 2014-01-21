@@ -1,3 +1,5 @@
+(setq default-directory (expand-file-name "~/")) ; osx cocoa emacs workaround.
+
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;; setup package.el
