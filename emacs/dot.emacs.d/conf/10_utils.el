@@ -50,3 +50,34 @@
     (setq keyword (read-string (format "Search at google with [%s]" keyword) nil nil keyword))
     (browse-url (format "http://www.google.co.jp/search?q=%s" (escape-string keyword)))
 ))
+
+(defun toggle-camelcase-and-snakecase ()
+  (interactive)
+ 
+  (let (start end bounds)
+    (if (and transient-mark-mode mark-active)
+        (progn
+          (setq start (mark))
+          (setq end   (point)))
+      (let ((bounds (bounds-of-thing-at-point 'symbol)))
+        (when bounds
+          (setq start (car bounds))
+          (setq end   (cdr bounds))))
+      )
+    (when (and start end) (toggle-camelcase-and-snakecase-innter (min start end) (max start end)))
+    ))
+ 
+(defun toggle-camelcase-and-snakecase-innter (start end)
+  (save-excursion
+    (save-restriction
+      (setq case-fold-search nil)
+      (narrow-to-region start end)
+      (if (string-match "_" (buffer-substring start end))
+          (progn ;; snake case => camel case
+            (goto-char (point-min))
+            (while (re-search-forward "_\\(.\\)" nil t)
+              (replace-match (upcase (match-string 1)))))
+        (progn ;; camel case => snake case
+          (goto-char (point-min))
+          (while (re-search-forward "\\([a-z]\\)\\([A-Z]\\)" nil t)
+            (replace-match (concat (match-string 1) "_" (downcase (match-string 2))))))))))
