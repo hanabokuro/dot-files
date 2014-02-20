@@ -1,5 +1,7 @@
 (el-get 'sync 'ruby-mode)
 
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (el-get 'sync 'inf-ruby)
@@ -24,7 +26,10 @@
 
 (el-get 'sync 'ruby-electric)
 (require 'ruby-electric)
-(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+(add-hook 'ruby-mode-hook '(lambda ()
+                             (ruby-electric-mode t)
+                             (define-key ruby-mode-map " " 'mlh-space-bar-backward-henkan)
+                             ))
 
 
 ;;
