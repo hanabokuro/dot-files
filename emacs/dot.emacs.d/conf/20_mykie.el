@@ -1,4 +1,5 @@
 (el-get 'sync 'mykie)
+(require 'mykie)
 
 (mykie:set-keys global-map
   "C-x C-f"
