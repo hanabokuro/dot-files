@@ -46,3 +46,12 @@
                            (helm-other-buffer
                             my-helm-source-list-for-helm-other-buffer
                             "*helm mini*")))
+
+;;
+;; Helm をストレスなく使うための個人的な設定 - あらびき日記 http://d.hatena.ne.jp/a_bicky/20140104/1388822688
+;;
+;; Emulate `kill-line' in helm minibuffer
+(setq helm-delete-minibuffer-contents-from-point t)
+(defadvice helm-delete-minibuffer-contents (before helm-emulate-kill-line activate)
+  "Emulate `kill-line' in helm minibuffer"
+  (kill-new (buffer-substring (point) (field-end))))

@@ -53,6 +53,7 @@
 
 ; ignore case with file name completion 
 (setq read-file-name-completion-ignore-case t)
+(setq completion-ignore-case t)
 
 ;; X Windows Systemではクリップボードに3種類のバッファが用意されており、コピー方法によって使用するバッファが異なる。
 ;; PRIMARY
@@ -99,4 +100,7 @@
 
 ;; tab width
 (setq-default tab-width 4 indent-tabs-mode nil)
+
+;; revert any buffer associated with a file when the file changes on disk
+(global-auto-revert-mode 1)
 
