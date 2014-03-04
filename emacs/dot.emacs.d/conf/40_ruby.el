@@ -1,4 +1,5 @@
 (el-get 'sync 'ruby-mode)
+(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
