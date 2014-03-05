@@ -91,7 +91,7 @@
 (el-get 'sync 'magit)
 
 (setq magit-log-header-end "-- End of Magit header --\n")
-(add-to-list 'process-coding-system-alist '("git" . (euc-jp . euc-jp))); for v1.0
+; (add-to-list 'process-coding-system-alist '("git" . (euc-jp . euc-jp))); for v1.0
 
 ; (setq magit-diff-options '("--word-diff"))
 ; (setq magit-diff-options '("--word-diff" "--color-words"))

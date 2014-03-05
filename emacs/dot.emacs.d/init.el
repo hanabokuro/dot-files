@@ -33,3 +33,33 @@
 (put 'narrow-to-region 'disabled nil)
 
 (put 'set-goal-column 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(cperl-close-paren-offset -4)
+ '(cperl-continued-statement-offset 4)
+ '(cperl-indent-level 4)
+ '(cperl-indent-parens-as-block t)
+ '(cperl-tab-always-indent t)
+ '(display-time-mode t)
+ '(eshell-ask-to-save-history (quote always))
+ '(eshell-cmpl-cycle-completions nil)
+ '(eshell-hist-ignoredups t)
+ '(eshell-history-size 1000)
+ '(eshell-ls-exclude-regexp "~\\'")
+ '(eshell-ls-initial-args "-h")
+ '(eshell-modules-list (quote (eshell-alias eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-rebind eshell-script eshell-term eshell-unix eshell-xtra)))
+ '(eshell-stringify-t nil)
+ '(eshell-term-name "ansi")
+ '(eshell-visual-commands (quote ("vi" "vim" "top" "screen" "less" "lynx" "ssh" "rlogin" "telnet")))
+ '(font-lock-maximum-decoration t)
+ '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(show-paren-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

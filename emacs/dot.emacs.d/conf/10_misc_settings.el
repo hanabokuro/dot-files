@@ -104,3 +104,5 @@
 ;; revert any buffer associated with a file when the file changes on disk
 (global-auto-revert-mode 1)
 
+;; Go down one level like unix command `cd ..'.
+(define-key minibuffer-local-filename-completion-map "\C-l" '(lambda () (interactive) (insert-string (concat (helm-reduce-file-name (delete-and-extract-region (minibuffer-prompt-end) (point-max)) 1 ) "/"))))

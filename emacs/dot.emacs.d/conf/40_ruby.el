@@ -31,6 +31,10 @@
                              (define-key ruby-mode-map " " 'mlh-space-bar-backward-henkan)
                              ))
 
+(defun mlhruby ()
+  (interactive)
+  (define-key ruby-mode-map " " 'mlh-space-bar-backward-henkan))
+
 
 ;;
 ;; Add them to ~/.hirb.yml to disable warning "WARNING: terminal is not fully functional"

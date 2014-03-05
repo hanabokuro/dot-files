@@ -5,5 +5,5 @@
   "C-x C-f"
   :default find-file
   :file    helm-find-files
-  :url     browse-url
+;;;  :url     browse-url
   )
