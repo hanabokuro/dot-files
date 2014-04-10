@@ -1,5 +1,6 @@
 ;; compatibility hack
 (defun make-local-hook (dummy))
+(defvaralias 'last-command-char 'last-command-event)
 
 ;; OS§Ú»Ω Ã
 (defvar run-linux (equal system-type 'gnu/linux))
