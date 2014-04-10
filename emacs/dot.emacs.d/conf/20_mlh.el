@@ -12,3 +12,6 @@
 (setq mlh-default-backend "anthy")
 (global-set-key " " 'mlh-space-bar-backward-henkan)
 
+(defun setup-mlh ()
+  (interactive)
+  (local-set-key " " 'mlh-space-bar-backward-henkan))
