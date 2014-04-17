@@ -1,0 +1,4 @@
+(:name flycheck-pos-tip
+ :type github
+ :pkgname "flycheck/flycheck-pos-tip"
+)

@@ -1,0 +1,4 @@
+(:name darkburn-theme
+ :type github
+ :pkgname "gorauskas/darkburn-theme"
+)

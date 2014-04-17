@@ -31,5 +31,8 @@
      )))
 
 ; (color-theme-hanabokuro)
-(color-theme-robin-hood)
+; (color-theme-robin-hood)
 
+
+(el-get 'sync 'darkburn-theme)
+(load "darkburn-theme")
