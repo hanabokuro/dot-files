@@ -1,4 +1,5 @@
 (el-get 'sync 'flycheck)
+(el-get 'sync 'pos-tip)
 (el-get 'sync 'flycheck-pos-tip)
 
 (eval-after-load 'flycheck

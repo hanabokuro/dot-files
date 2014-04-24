@@ -9,6 +9,13 @@
 (package-initialize)
 
 ;; el-get
+;
+; M-x el-get-self-update
+; Update only one package, el-get itself.
+;
+; M-x el-get-emacswiki-build-local-recipes
+; retrieve the index of elisp pages at emacswiki and turn them into a local recipe file set
+;
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (unless (require 'el-get nil 'noerror)
