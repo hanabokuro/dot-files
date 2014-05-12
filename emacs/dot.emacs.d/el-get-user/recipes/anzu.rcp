@@ -1,0 +1,4 @@
+(:name anzu
+       :description "Emacs port of anzu.vim - handy number of hits when doing incremental search"
+       :type github
+       :pkgname "syohex/emacs-anzu")
