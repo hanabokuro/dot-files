@@ -5,3 +5,4 @@ emacs/dot.emacs.d/elpa/
 emacs/dot.emacs.d/personal
 emacs/dot.emacs.d/tramp
 emacs/dot.emacs.d/anything-c-adaptive-history
+emacs/dot.emacs.d/conf/00-personal-setting.el
