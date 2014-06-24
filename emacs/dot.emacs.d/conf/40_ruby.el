@@ -25,10 +25,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(el-get 'sync 'ruby-electric)
-(require 'ruby-electric)
+; (el-get 'sync 'ruby-electric)  ; use smartparens
+; (require 'ruby-electric)       ; use smartparens
 (add-hook 'ruby-mode-hook '(lambda ()
-                             (ruby-electric-mode t)
+;                             (ruby-electric-mode t) ; use smartparens
                              (define-key ruby-mode-map " " 'mlh-space-bar-backward-henkan)
                              ))
 
