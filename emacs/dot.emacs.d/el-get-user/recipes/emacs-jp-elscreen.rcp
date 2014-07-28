@@ -1,0 +1,6 @@
+(:name emacs-jp-elscreen
+ :description "Emacs window session manager modeled after GNU screen with patch.   http://qiita.com/debug-ito/items/2ab016d4fcc92c1cfa18"
+ :type github
+ :pkgname "emacs-jp/elscreen"
+)
+

@@ -1,8 +1,9 @@
 (setq elscreen-prefix-key "\C-x\C-\\")
-(el-get 'sync 'elscreen)
+(el-get 'sync 'emacs-jp-elscreen)
 (require 'elscreen)
 
-(loop repeat 10 do (elscreen-create-internal t))
+(elscreen-start)
+(loop repeat 10 do (elscreen-create))
 (elscreen-goto 0)
 
 (global-set-key [left]  'elscreen-previous)
