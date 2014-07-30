@@ -5,6 +5,9 @@
 ;; C-x <RETURN> r    バッファの表示文字コードを変更する
 ;; C-x <RETURN> c    universal-coding-system-argument
 
+;; M-! find . -name '*.ANY_EXT' | etags -
+;; M-.    find-tags
+;; M-*    pop-tag-mark
 
 ;; font list
 ;; (mapcar (lambda(x) (insert x "\n")) (x-list-fonts "*"))
