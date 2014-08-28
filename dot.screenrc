@@ -32,7 +32,7 @@
 
 startup_message off
 autodetach on
-shell -$SHELL
+#shell -$SHELL
 defhstatus "^En:^Et"
 
 term screen-256color
@@ -46,7 +46,7 @@ hardstatus alwayslastline "%{=u Wr}[%Y-%m-%d %02c%{-u Wr}] %{Wk}%-w%{BW}%n %t%{-
 multiuser on
 
 escape ^x^x
-zombile ^[
+# zombile ^[
 
 bindkey -k kr next
 bindkey -k kl  prev
@@ -72,4 +72,4 @@ bind "^k" eval "copy" "stuff ' $ '"
 # yank
 bind "^y" paste .
 
-markkeys 'h=^B:l=^F:$=^E:^d=^v:^D=^z'
+# markkeys 'h=^B:l=^F:$=^E:^d=^v:^D=^z'
