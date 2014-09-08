@@ -28,6 +28,8 @@
 
 (add-hook 'php-mode-hook
           (lambda ()
+            (provide 'anything)
+            (provide 'anything-match-plugin)
             (require 'php-completion)
             (php-completion-mode t)))
 
