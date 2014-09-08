@@ -46,4 +46,11 @@
 ; ac-source-etags
                                ))))
 
+(defun run-php-cs-fixer ()
+  (interactive)
+  (shell-command (concat "php-cs-fixer fix " (buffer-file-name) " --level=psr2"))
+  (revert-buffer nil t))
 
+(add-hook 'php-mode-hook
+          (lambda ()
+            (add-hook 'after-save-hook 'run-php-cs-fixer nil 'make-it-local)))
