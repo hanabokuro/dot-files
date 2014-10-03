@@ -3,7 +3,7 @@
 (el-get 'sync 'flymake-php)
 (add-hook 'php-mode-hook 'flymake-php-load)
 
-(el-get 'sync 'php-completion)
+; (el-get 'sync 'php-completion)
 
 (add-hook 'php-mode-hook
           (lambda ()
@@ -26,30 +26,32 @@
             (setq indent-tabs-mode nil)))   ; インデントはスペースを使う
 
 
-(add-hook 'php-mode-hook
-          (lambda ()
-            (provide 'anything)
-            (provide 'anything-match-plugin)
-            (require 'php-completion)
-            (php-completion-mode t)))
+; (add-hook 'php-mode-hook
+;           (lambda ()
+;             (provide 'anything)
+;             (provide 'anything-match-plugin)
+;             (require 'php-completion)
+;            (php-completion-mode t)))
 
-(add-hook 'php-mode-hook
-          (lambda ()
-            (make-local-variable 'ac-sources)
-            (setq ac-sources '(
-                               ac-source-words-in-same-mode-buffers
-                               ac-source-php-completion
-                               ac-source-filename
-                               ac-source-abbrev
+; (add-hook 'php-mode-hook
+;           (lambda ()
+;             (make-local-variable 'ac-sources)
+;             (setq ac-sources '(
+;                                ac-source-words-in-same-mode-buffers
+;                                ac-source-php-completion
+;                                ac-source-filename
+;                               ac-source-abbrev
 ; ac-source-yasnippet
 ; ac-source-gtags
 ; ac-source-etags
-                               ))))
+;                               ))))
 
-(defun run-php-cs-fixer ()
+(defun xrun-php-cs-fixer ()
   (interactive)
-  (shell-command (concat "php-cs-fixer fix " (buffer-file-name) " --level=psr2"))
+  (shell-command (concat "php-cs-fixer fix " (buffer-file-name) ""))
   (revert-buffer nil t))
+
+(defun run-php-cs-fixer ())
 
 (add-hook 'php-mode-hook
           (lambda ()

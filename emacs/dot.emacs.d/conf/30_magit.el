@@ -90,6 +90,8 @@
 
 (el-get 'sync 'magit)
 
+(global-set-key (kbd "C-&") 'magit-status)
+
 (setq magit-log-header-end "-- End of Magit header --\n")
 ; (add-to-list 'process-coding-system-alist '("git" . (euc-jp . euc-jp))); for v1.0
 
