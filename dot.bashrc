@@ -2,10 +2,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-if [ -f $HOME/.bash_profile ] ; then
-  source $HOME/.bash_profile
-fi
-
 for F in /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash \
          /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh \
          /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash \
