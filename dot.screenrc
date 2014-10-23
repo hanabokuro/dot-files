@@ -2,6 +2,19 @@
 #   alias s='[ $TERM != "screen" ] && screen -D -RR'
 # しておいて、常に s が幸せ
 
+#
+# * CREATE *
+# screen -S NAME
+#
+# * LIST *
+# screen -ls 
+# screen -ls USERNAME/
+#
+# * RETRIEVE *
+# screen -r NO
+#
+#
+
 
 #
 # C-x ?     : show help
@@ -28,6 +41,13 @@
 # C-x y     : yank
 #
 # C-x C-[   : enter copy mode
+#
+# C-x :     : command
+#
+
+#
+# :acladd <USERNAME>
+#
 
 
 startup_message off
