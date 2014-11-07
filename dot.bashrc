@@ -39,11 +39,18 @@ dig() {
 title(){
     if [ "$1"x != "x" ] ; then
         echo "k"$1"\\"
-
     fi
 }
 
 alias t=title
+
+window_title(){
+    if [ "$1"x != "x" ] ; then
+        echo "]2;"$1""
+    fi
+}
+
+alias wt=window_title
 
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
