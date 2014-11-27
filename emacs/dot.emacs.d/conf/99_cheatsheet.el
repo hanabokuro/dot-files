@@ -83,3 +83,22 @@
 ;; ================ w3m ================
 ;; M-x w3m-print-this-url
 ;;    copy url to kill-buffer
+
+;; ================ git blame ================
+;; C-x v g vc-switch-backend
+;;
+;; RET             vc-annotate-goto-line
+;; =               vc-annotate-show-diff-revision-at-line
+;; d               vc-annotate-show-diff-revision-at-line
+;; D               vc-annotate-show-changeset-diff-revision-at-line
+;;
+;; a               vc-annotate-revision-previous-to-line
+;; f               vc-annotate-find-revision-at-line
+;; j               vc-annotate-revision-at-line
+;; l               vc-annotate-show-log-revision-at-line
+;; n               vc-annotate-next-revision
+;; p               vc-annotate-prev-revision
+;; v               vc-annotate-toggle-annotation-visibility
+;; w               vc-annotate-working-revision
+
+
