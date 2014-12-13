@@ -2,10 +2,13 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+PS1='\h:\W \u \$ '
+
 for F in /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash \
          /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh \
          /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash \
          /usr/share/doc/tmux-1.6/examples/bash_completion_tmux.sh \
+         `brew --prefix`/etc/bash_completion \
          ; do
   if [ -f $F ] ; then
     . $F
@@ -53,6 +56,13 @@ window_title(){
 alias wt=window_title
 
 export DOCKER_HOST=tcp://127.0.0.1:4243
+#    export DOCKER_TLS_VERIFY=1
+#    export DOCKER_CERT_PATH=/Users/shmorimo/.boot2docker/certs/boot2docker-vm
 
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
+
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
