@@ -55,6 +55,9 @@ window_title(){
 
 alias wt=window_title
 
+export GOPATH=$HOME/work/gocode
+export PATH="$GOPATH/bin:$PATH"
+
 export DOCKER_HOST=tcp://127.0.0.1:4243
 #    export DOCKER_TLS_VERIFY=1
 #    export DOCKER_CERT_PATH=/Users/shmorimo/.boot2docker/certs/boot2docker-vm
@@ -66,3 +69,6 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+
+# added by travis gem
+[ -f /Users/shmorimo/.travis/travis.sh ] && source /Users/shmorimo/.travis/travis.sh
