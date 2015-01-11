@@ -1,0 +1,4 @@
+(:name go-mode
+       :description "An improved Go mode for emacs"
+       :type github
+       :pkgname "dominikh/go-mode.el")

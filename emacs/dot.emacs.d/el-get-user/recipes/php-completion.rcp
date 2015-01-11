@@ -1,0 +1,7 @@
+(:name git-gutter
+       :description "php-completion with hel"
+       :website "https://github.com/hanabokuro/php-completion"
+       :type github
+       :pkgname "hanabokuro/php-completion"
+       :branch "feature/helm-version"
+       )
