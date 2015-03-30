@@ -1,0 +1,4 @@
+(:name ghc-mod
+       :description "Happy Haskell programming for editors"
+       :type github
+       :pkgname "kazu-yamamoto/ghc-mod")
