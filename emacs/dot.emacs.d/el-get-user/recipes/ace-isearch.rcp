@@ -1,0 +1,4 @@
+(:name ace-isearch
+       :description "A seamless bridge between isearch and ace-jump-mode."
+       :type github
+       :pkgname "tam17aki/ace-isearch")
