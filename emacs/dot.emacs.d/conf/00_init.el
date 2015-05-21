@@ -2,6 +2,8 @@
 (defun make-local-hook (dummy))
 (defvaralias 'last-command-char 'last-command-event)
 
+(add-hook 'before-save-hook '(lambda () (save-excursion (end-of-buffer) (delete-blank-lines))))
+
 ;; OS§Ú»Ω Ã
 (defvar run-linux (equal system-type 'gnu/linux))
 
