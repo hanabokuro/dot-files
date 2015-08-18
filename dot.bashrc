@@ -55,6 +55,8 @@ window_title(){
 
 alias wt=window_title
 
+export PATH=/usr/local/bin:$PATH
+
 export GOPATH=$HOME/work/gocode
 export PATH="$GOPATH/bin:$PATH"
 
