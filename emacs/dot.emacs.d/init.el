@@ -63,5 +63,11 @@
  '(eshell-visual-commands (quote ("vi" "vim" "top" "screen" "less" "lynx" "ssh" "rlogin" "telnet")))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(font-lock-maximum-decoration t)
- '(safe-local-variable-values (quote ((encoding . utf-8))))
+ '(safe-local-variable-values (quote ((dns-mode-soa-auto-increment-serial) (encoding . utf-8))))
  '(show-paren-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(region ((t (:background "purple1")))))
