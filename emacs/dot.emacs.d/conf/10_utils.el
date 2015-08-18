@@ -81,3 +81,15 @@
           (goto-char (point-min))
           (while (re-search-forward "\\([a-z]\\)\\([A-Z]\\)" nil t)
             (replace-match (concat (match-string 1) "_" (downcase (match-string 2))))))))))
+
+(defun get-string-at-cursor ()
+  (save-excursion
+    (let (beg)
+      (setq beg (nth 8 (parse-partial-sexp 1 (point))))
+      (if beg
+          (progn
+            (goto-char beg)
+            (forward-sexp)
+            (buffer-substring-no-properties (1+ beg) (1- (point))))
+        nil)
+    )))
