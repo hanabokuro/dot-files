@@ -83,6 +83,17 @@
             (replace-match (concat (match-string 1) "_" (downcase (match-string 2))))))))))
 
 (defun get-string-at-cursor ()
+  (let (region begn end)
+    (setq region (get-string-region-at-cursor))
+    (if region
+        (progn
+          (setq beg (car region))
+          (setq end (cadr region))
+          (buffer-substring-no-properties beg end))
+        nil)
+    ))
+
+(defun get-string-region-at-cursor ()
   (save-excursion
     (let (beg)
       (setq beg (nth 8 (parse-partial-sexp 1 (point))))
@@ -90,6 +101,6 @@
           (progn
             (goto-char beg)
             (forward-sexp)
-            (buffer-substring-no-properties (1+ beg) (1- (point))))
+            (list (1+ beg) (1- (point))))
         nil)
     )))

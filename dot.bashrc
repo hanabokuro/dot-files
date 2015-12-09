@@ -55,14 +55,8 @@ window_title(){
 
 alias wt=window_title
 
-export PATH=/usr/local/bin:$PATH
-
-export GOPATH=$HOME/work/gocode
-export PATH="$GOPATH/bin:$PATH"
-
-export DOCKER_HOST=tcp://127.0.0.1:4243
-#    export DOCKER_TLS_VERIFY=1
-#    export DOCKER_CERT_PATH=/Users/shmorimo/.boot2docker/certs/boot2docker-vm
+export GOPATH=$HOME/mygo
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
 
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
@@ -74,3 +68,7 @@ eval "$(rbenv init -)"
 
 # added by travis gem
 [ -f /Users/shmorimo/.travis/travis.sh ] && source /Users/shmorimo/.travis/travis.sh
+
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+eval $(docker-machine env default)
