@@ -12,3 +12,5 @@
 ;; Ruby
 (add-hook 'ruby-mode-hook 'flycheck-mode)
 
+;; JavaScript
+(add-hook 'js-mode-hook 'flycheck-mode)
