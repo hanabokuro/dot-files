@@ -1,0 +1,4 @@
+(:name avy
+       :description "avy is a GNU Emacs package for jumping to visible text using a char-based decision tree. See also ace-jump-mode and vim-easymotion - avy uses the same idea."
+       :type github
+       :pkgname "abo-abo/avy")

@@ -6,3 +6,7 @@ emacs/dot.emacs.d/personal
 emacs/dot.emacs.d/tramp
 emacs/dot.emacs.d/anything-c-adaptive-history
 emacs/dot.emacs.d/conf/00-personal-setting.el
+/emacs/dot.emacs.d/ac-comphist.dat
+/emacs/dot.emacs.d/bookmarks
+/emacs/dot.emacs.d/site-lisp/
+/emacs/dot.emacs.d/url/
