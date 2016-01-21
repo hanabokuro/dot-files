@@ -27,6 +27,9 @@
                 [remap eshell-pcomplete]
                 'helm-esh-pcomplete)))
 
+;; tag jump
+(global-set-key (kbd "M-.") 'helm-etags-select)
+
 ;; king ring
 (global-set-key "\M-\C-y" 'helm-show-kill-ring)
 

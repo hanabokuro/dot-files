@@ -58,13 +58,22 @@
  '(eshell-history-size 1000)
  '(eshell-ls-exclude-regexp "~\\'")
  '(eshell-ls-initial-args "-h")
- '(eshell-modules-list (quote (eshell-alias eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-rebind eshell-script eshell-term eshell-unix eshell-xtra)))
+ '(eshell-modules-list
+   (quote
+    (eshell-alias eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-rebind eshell-script eshell-term eshell-unix eshell-xtra)))
  '(eshell-stringify-t nil)
  '(eshell-term-name "ansi")
- '(eshell-visual-commands (quote ("vi" "vim" "top" "screen" "less" "lynx" "ssh" "rlogin" "telnet")))
+ '(eshell-visual-commands
+   (quote
+    ("vi" "vim" "top" "screen" "less" "lynx" "ssh" "rlogin" "telnet")))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(font-lock-maximum-decoration t)
- '(safe-local-variable-values (quote ((dns-mode-soa-auto-increment-serial) (encoding . utf-8))))
+ '(helm-ag-base-command "ack --nocolor --nogroup")
+ '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
+ '(safe-local-variable-values
+   (quote
+    ((dns-mode-soa-auto-increment-serial)
+     (encoding . utf-8))))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
