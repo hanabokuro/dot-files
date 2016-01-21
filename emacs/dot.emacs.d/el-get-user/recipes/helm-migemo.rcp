@@ -1,6 +1,5 @@
 (:name helm-migemo
        :description "`helm' with migemo extension."
        :type github
-       :pkgname "emacs-helm/helm-migemo"
+       :pkgname "emacs-jp/helm-migemo"
 )
-

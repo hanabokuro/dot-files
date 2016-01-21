@@ -2,6 +2,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
+(require 'eieio)
 ;; setup package.el
 (require 'package)
 (add-to-list 'package-archives '("melpa" .     "http://melpa.milkbox.net/packages/"))
