@@ -14,3 +14,6 @@
 
 ;; JavaScript
 (add-hook 'js-mode-hook 'flycheck-mode)
+
+;; php
+(add-hook 'php-mode-hook 'flycheck-mode)

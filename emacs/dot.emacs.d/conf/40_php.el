@@ -1,10 +1,5 @@
 (el-get 'sync 'php-mode)
 
-(el-get 'sync 'flymake-php)
-(add-hook 'php-mode-hook 'flymake-php-load)
-
-; (el-get 'sync 'php-completion)
-
 (add-hook 'php-mode-hook
           (lambda ()
             (defun ywb-php-lineup-arglist-intro (langelem)
