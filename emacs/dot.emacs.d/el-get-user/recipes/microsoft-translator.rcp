@@ -1,0 +1,5 @@
+(:name emacs-jp-elscreen
+ :description "The Microsoft Translator services which can be used in Emacs to perform language translation operations"
+ :type github
+ :pkgname "fujimisakari/microsoft-translator"
+)
