@@ -17,6 +17,20 @@ done
 
 export PS1='[\u@\h \W$(__git_ps1)]\$ '
 
+################
+AGENT="$HOME/tmp/ssh-agent-$USER"
+if [ -S "$SSH_AUTH_SOCK" ]; then
+	case $SSH_AUTH_SOCK in
+	/tmp/*/agent.[0-9]*)
+		ln -snf "$SSH_AUTH_SOCK" $AGENT && export SSH_AUTH_SOCK=$AGENT
+	esac
+elif [ -S $AGENT ]; then
+	export SSH_AUTH_SOCK=$AGENT
+else
+	echo "no ssh-agent"
+fi
+################
+
 alias u=pushd
 alias o=popd
 alias s='[ $TERM != "screen" ] && screen -D -RR'
