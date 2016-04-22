@@ -67,6 +67,14 @@ window_title(){
     fi
 }
 
+u2t(){
+  if [ $(uname) == "Darwin" ] ; then
+    date -r $1
+  else
+    date -d "@$1"
+  fi
+}
+
 alias wt=window_title
 
 export GOPATH=$HOME/mygo
