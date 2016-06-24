@@ -78,7 +78,7 @@ u2t(){
 alias wt=window_title
 
 export GOPATH=$HOME/mygo
-export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"

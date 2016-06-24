@@ -2,10 +2,5 @@
 
 (el-get 'sync 'bash-completion)
 
-(require 'bash-completion)
-(bash-completion-setup)
-
-
-
-
-
+;(require 'bash-completion)
+;(bash-completion-setup)

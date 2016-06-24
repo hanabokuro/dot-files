@@ -55,6 +55,14 @@ autodetach on
 #shell -$SHELL
 defhstatus "^En:^Et"
 
+
+altscreen on
+
+# for mouse wheel scrolling
+termcapinfo xterm* te@:ti@
+
+defmousetrack on
+
 term screen-256color
 
 # see STRING ESCAPES chapter
