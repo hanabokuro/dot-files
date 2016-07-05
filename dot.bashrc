@@ -92,5 +92,3 @@ eval "$(rbenv init -)"
 [ -f /Users/shmorimo/.travis/travis.sh ] && source /Users/shmorimo/.travis/travis.sh
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-eval $(docker-machine env default)
