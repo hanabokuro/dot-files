@@ -219,10 +219,10 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'prog-mode
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
-   dotspacemacs-smartparens-strict-mode nil
+   dotspacemacs-smartparens-strict-mode t
    ;; Select a scope to highlight delimiters. Possible values are `any',
    ;; `current', `all' or `nil'. Default is `all' (highlight any scope and
    ;; emphasis the current one). (default 'all)
@@ -233,7 +233,7 @@ values."
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
-   dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
+   dotspacemacs-search-tools '("akk" "ag" "pt" "grep")
    ;; The default package repository used if no explicit repository has been
    ;; specified with an installed package.
    ;; Not used for now. (default nil)
@@ -243,7 +243,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'all
    ))
 
 (defun dotspacemacs/user-init ()
@@ -253,8 +253,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-    )
-
+  )
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
@@ -262,20 +261,47 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (define-key global-map (kbd "C-+") 'text-scale-increase)
-  (define-key global-map (kbd "C--") 'text-scale-decrease)
-  (define-key global-map (kbd "C-\\") 'undo-tree-undo)
-  (define-key global-map (kbd "C-]") 'goto-line)
-  (define-key global-map (kbd "C-&") 'magit-status)
   ;; elscreen
   (progn
     (elscreen-start)
     (loop repeat 10 do (elscreen-create))
     (elscreen-goto 0)
-    (global-set-key [left]  'elscreen-previous)
-    (global-set-key [right] 'elscreen-next)
     )
-  )
+  ;; cua-mode
+  (cua-mode t)
+  (setq cua-enable-cua-keys nil)
+
+  (define-key global-map (kbd "C-+") 'text-scale-increase)
+  (define-key global-map (kbd "C--") 'text-scale-decrease)
+
+  (define-key global-map (kbd "C-h") 'backward-delete-char)
+  (define-key global-map (kbd "C-\\") 'undo-tree-undo)
+  (define-key global-map (kbd "C-x j") 'delete-horizontal-space)
+  (define-key global-map (kbd "C-]") 'goto-line)
+  (define-key global-map (kbd "C-&") 'magit-status)
+  (define-key global-map (kbd "C-z") 'scroll-down)
+
+  (define-key global-map (kbd "C-x g") 'grep)
+  (define-key global-map (kbd "C-x c") 'compile)
+
+  (define-key global-map (kbd "<left>")  'elscreen-previous)
+  (define-key global-map (kbd "<right>") 'elscreen-next)
+
+
+)
+;; TODO
+;; ask before quit
+;; theme monokai
+;; migemo
+;; mlh
+;; dmacro
+;; dired rename
+;; flycheck
+;; swap-quote
+;; ace-jump
+;; git-gutter
+;; default font size
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
