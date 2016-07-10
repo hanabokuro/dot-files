@@ -51,7 +51,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+                                      elscreen
+                                      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -263,6 +265,16 @@ you should place your code here."
   (define-key global-map (kbd "C-+") 'text-scale-increase)
   (define-key global-map (kbd "C--") 'text-scale-decrease)
   (define-key global-map (kbd "C-\\") 'undo-tree-undo)
+  (define-key global-map (kbd "C-]") 'goto-line)
+  (define-key global-map (kbd "C-&") 'magit-status)
+  ;; elscreen
+  (progn
+    (elscreen-start)
+    (loop repeat 10 do (elscreen-create))
+    (elscreen-goto 0)
+    (global-set-key [left]  'elscreen-previous)
+    (global-set-key [right] 'elscreen-next)
+    )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
