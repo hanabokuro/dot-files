@@ -45,6 +45,15 @@
 # C-x :     : command
 #
 
+# Copy & Paste
+#
+# C-x C-[ : enter copy mode
+# SPC : mark
+# RET : copy to buffer
+#
+# C-x C-y : yank
+# 
+
 #
 # :acladd <USERNAME>
 #
