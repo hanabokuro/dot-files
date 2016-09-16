@@ -94,6 +94,7 @@
 
 (setq magit-log-header-end "-- End of Magit header --\n")
 (setq magit-default-tracking-name-function `magit-default-tracking-name-branch-only)
+(setq magit-fetch-arguments (quote ("--prune")))
 
 ; (add-to-list 'process-coding-system-alist '("git" . (euc-jp . euc-jp))); for v1.0
 
