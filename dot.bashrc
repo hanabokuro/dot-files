@@ -75,6 +75,18 @@ u2t(){
   fi
 }
 
+# cd $(git rev-parse --show-toplevel) ; export GOPATH=~/mygo ;  make
+gittop(){
+    git rev-parse --show-toplevel
+}
+
+function fury-panda() {
+    local entry=$(gcloud --project fury-panda compute instances list --filter='status:RUNNING' | peco --query "$*")
+    local name=$(echo $entry | awk '{print $1}')
+    local zone=$(echo $entry | awk '{print $2}')
+    gcloud --project fury-panda compute ssh --zone $zone $name
+}
+
 alias wt=window_title
 
 export GOPATH=$HOME/mygo

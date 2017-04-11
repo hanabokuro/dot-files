@@ -77,6 +77,9 @@
     ((dns-mode-soa-auto-increment-serial)
      (encoding . utf-8))))
  '(show-paren-mode t))
+
+; (load (expand-file-name "~/.emacs.d/slack.el"))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

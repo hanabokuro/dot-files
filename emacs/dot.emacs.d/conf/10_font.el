@@ -22,6 +22,8 @@
       (set-face-attribute 'default nil :family my-font :height my-font-height)
       ;;(set-frame-font (format "%s-%d" my-font (/ my-font-height 10)))
       )
+
+;;(set-face-attribute 'default nil :family "Go Regular" :height  170)
     
     ;; 日本語文字に別のフォントを指定
     (when my-font-ja
