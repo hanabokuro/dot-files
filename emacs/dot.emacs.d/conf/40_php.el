@@ -13,12 +13,12 @@
     (setq git-toplevel (replace-in-string (shell-command-to-string "git rev-parse --show-toplevel") "\n" ""))
     (if (string-match (concat git-toplevel "/\\(src\\|tests\\)/") (buffer-file-name))
         (progn
-          (shell-command (format "php-cs-fixer fix --config %s/.php_cs %s" (buffer-file-name) ""))
+          (shell-command (format "php-cs-fixer fix -q --config-file %s/.php_cs %s" git-toplevel (buffer-file-name) ""))
           (revert-buffer nil t))
       )
     (if (string-match (concat git-toplevel "/app/") (buffer-file-name))
         (progn
-          (shell-command (format "php-cs-fixer fix --config %s/.php_cs_legacy %s" (buffer-file-name) ""))
+          (shell-command (format "php-cs-fixer fix -q --config-file %s/.php_cs_legacy %s" git-toplevel (buffer-file-name) ""))
           (revert-buffer nil t))
       )
     ))
