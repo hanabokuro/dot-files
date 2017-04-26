@@ -104,3 +104,41 @@
             (list (1+ beg) (1- (point))))
         nil)
     )))
+
+(defun insert-apidoc-comment ()
+  (interactive)
+  (save-excursion
+    (let ((file-name (buffer-file-name))
+          (current_line (buffer-substring (point-at-bol) (point-at-eol)))
+          (method "get")
+          path
+          title
+          name
+          group
+          api_name
+          )
+      (and
+       (string-match "\\([^/]+\\)_controller\.php$" file-name)
+       (setq group (substring file-name (match-beginning 1) (match-end 1)))
+       (string-match "\\bpublic +function +\\([a-zA-Z0-9_]+\\)" current_line)
+       (setq title (substring current_line (match-beginning 1) (match-end 1)))
+       (progn
+         (setq api_name (format "%s_%s_%s" method group title))
+         (save-restriction
+           (setq case-fold-search nil)
+           (narrow-to-region (point) (point))
+           (insert (capitalize api_name))
+           (goto-char (point-min))
+           (while (re-search-forward "_\\(.\\)" nil t)
+             (replace-match (upcase (match-string 1))))
+           (setq api_name (buffer-substring-no-properties (point-min) (point-max)))
+           (delete-region (point-min)(point-max))
+           )
+         (beginning-of-line)
+         (insert (concat "/**\n"
+                         (format " * @api {%s} /%s/%s %s\n" method group title title)
+                         (format " * @apiName %s\n" api_name)
+                         (format " * @apiGroup %s\n" group)
+                         " *\n"
+                         " */\n"
+         )))))))
