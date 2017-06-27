@@ -87,8 +87,8 @@ escape ^x^x
 
 bindkey -k kr next
 bindkey -k kl  prev
-bindkey -k ku  focus
-bindkey -k kd  focus
+bindkey -k ku  focus up
+bindkey -k kd  focus down
 
 bind -c REGION 2 split
 bind -c REGION 1 only
