@@ -6,6 +6,8 @@
   (flycheck-pos-tip-mode)
   )
 
+(setq flycheck-standard-error-navigation nil)
+
 ;; Perl
 (add-hook 'perl-mode-hook 'flycheck-mode)
 

@@ -1,3 +1,9 @@
+;;; http://www.softantenna.com/wp/software/emacs-25-3/
+;;; Emacs 25.3が緊急リリース - 任意のLispコードが実行可能な脆弱性が修正される
+(eval-after-load "enriched"
+  '(defun enriched-decode-display-prop (start end &optional param)
+     (list start end)))
+
 (setq default-directory (expand-file-name "~/")) ; osx cocoa emacs workaround.
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
