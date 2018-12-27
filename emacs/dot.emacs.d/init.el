@@ -75,9 +75,10 @@
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(font-lock-maximum-decoration t)
  '(helm-ag-base-command "ack --nocolor --nogroup")
- '(magit-fetch-arguments (quote ("--prune")))
+ '(magit-fetch-arguments (quote ("--prune")) t)
  '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
  '(magit-merge-arguments (quote ("--no-ff")))
+ '(package-selected-packages (quote (smart-compile)))
  '(safe-local-variable-values
    (quote
     ((dns-mode-soa-auto-increment-serial)

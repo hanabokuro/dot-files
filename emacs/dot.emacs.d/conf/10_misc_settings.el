@@ -105,7 +105,7 @@
 (global-auto-revert-mode 1)
 
 ;; Go down one level like unix command `cd ..'.
-(define-key minibuffer-local-filename-completion-map "\C-l" '(lambda () (interactive) (insert-string (concat (helm-reduce-file-name (delete-and-extract-region (minibuffer-prompt-end) (point-max)) 1 ) "/"))))
+(define-key minibuffer-local-filename-completion-map "\C-l" '(lambda () (interactive) (insert (concat (helm-reduce-file-name (delete-and-extract-region (minibuffer-prompt-end) (point-max)) 1 )))))
 
 ;; 常に縦分割
 (setq split-width-threshold nil)
