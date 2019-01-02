@@ -6,9 +6,13 @@
     ))
 
 (el-get 'sync 'tamago)
-(require 'egg)
-(load "leim-list")
 
+(set-language-environment "Japanese")
+(setq default-input-method 'japanese-egg-anthy)
+
+(require 'egg)
+(require 'egg-mlh)
+(load "leim-list")
 (setq mlh-default-backend "anthy")
 (global-set-key " " 'mlh-space-bar-backward-henkan)
 

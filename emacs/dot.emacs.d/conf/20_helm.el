@@ -17,6 +17,7 @@
 (setq helm-command-prefix-key "C-x C") ;; default is C-x c. but it will be bound to smarter-compile.
 (el-get 'sync 'helm)
 (require 'helm-config)
+(require 'helm-for-files)
 
 (helm-mode 1)
 (define-key helm-find-files-map (kbd "<tab>") 'helm-execute-persistent-action)

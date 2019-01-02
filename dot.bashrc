@@ -3,6 +3,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 PS1='\h:\W \u \$ '
+export LC_ALL=C
 
 for F in /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash \
          /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh \
@@ -92,13 +93,7 @@ alias wt=window_title
 export GOPATH=$HOME/mygo
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
-export PATH="$HOME/.plenv/bin:$PATH"
-eval "$(plenv init -)"
-
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 
 # added by travis gem
 [ -f /Users/shmorimo/.travis/travis.sh ] && source /Users/shmorimo/.travis/travis.sh
