@@ -1,3 +1,5 @@
+(defalias 'insert-string 'insert)
+
 ;; URL escape/unescape
 (defun unescape (start end)
   (interactive "r")

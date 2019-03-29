@@ -98,4 +98,8 @@ export PATH="$HOME/bin:$PATH"
 # added by travis gem
 [ -f /Users/shmorimo/.travis/travis.sh ] && source /Users/shmorimo/.travis/travis.sh
 
+for D in /usr/local/opt/python/libexec/bin ; do
+    [ -d "$D" ] && PATH=$D:$PATH
+done
+
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH

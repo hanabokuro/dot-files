@@ -97,6 +97,7 @@
 (setq magit-fetch-arguments (quote ("--prune")))
 
 ; (add-to-list 'process-coding-system-alist '("git" . (euc-jp . euc-jp))); for v1.0
+(add-to-list 'process-coding-system-alist '("git" . (utf-8 . utf-8)))
 
 ; (setq magit-diff-options '("--word-diff"))
 ; (setq magit-diff-options '("--word-diff" "--color-words"))

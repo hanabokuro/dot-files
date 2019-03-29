@@ -109,3 +109,6 @@
 
 ;; 常に縦分割
 (setq split-width-threshold nil)
+
+;; dired で常にsymlinkをたどる
+(setq-default find-file-visit-truename t)
