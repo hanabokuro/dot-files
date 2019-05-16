@@ -91,15 +91,10 @@ function fury-panda() {
 alias wt=window_title
 
 export GOPATH=$HOME/mygo
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
-export PATH="$HOME/bin:$PATH"
 
 # added by travis gem
 [ -f /Users/shmorimo/.travis/travis.sh ] && source /Users/shmorimo/.travis/travis.sh
 
-for D in /usr/local/opt/python/libexec/bin ; do
+for D in /usr/local/opt/python/libexec/bin /usr/local/bin /usr/local/sbin /usr/local/go/bin $HOME/bin $HOME/.nodebrew/current/bin; do
     [ -d "$D" ] && PATH=$D:$PATH
 done
-
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
