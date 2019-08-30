@@ -88,6 +88,10 @@
 ;;
 ;;
 
+;;;; no idaa - dirty fix ;;;;
+(add-to-list 'load-path "~/.emacs.d/elpa/transient-20190304.2257")
+;;;; no idaa - dirty fix ;;;;
+
 (el-get 'sync 'magit)
 
 (global-set-key (kbd "C-&") 'magit-status)

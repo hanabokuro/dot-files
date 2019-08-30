@@ -1,5 +1,5 @@
 (setq elscreen-prefix-key "\C-x\C-\\")
-(el-get 'sync 'emacs-jp-elscreen)
+(el-get 'sync 'elscreen)
 (require 'elscreen)
 
 (elscreen-start)

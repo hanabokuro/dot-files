@@ -34,7 +34,8 @@ fi
 
 alias u=pushd
 alias o=popd
-alias s='[ $TERM != "screen" ] && screen -D -RR'
+# alias s='[ $TERM != "screen" ] && screen -D -RR'
+alias s='[ $TERM != "screen" ] && (tmux -u attach -d || tmux -u new-session)'
 
 dig() {
   TARGET=
