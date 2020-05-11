@@ -1,6 +1,7 @@
 ((magit-branch nil)
  (magit-commit nil
                ("--allow-empty"))
+ (magit-dispatch nil)
  (magit-fetch nil)
  (magit-gitignore nil)
  (magit-log
@@ -14,8 +15,11 @@
  (magit-merge nil)
  (magit-pull nil)
  (magit-push nil
-             ("--force-with-lease"))
+             ("--force-with-lease")
+             ("--force"))
+ (magit-reset nil)
  (magit-revert
   ("--edit"))
  (magit-stash nil)
+ (magit-tag nil)
  (magit:--author "shigeki morimoto <shmorimo@shigeki-no-MacBook-Pro.local>"))

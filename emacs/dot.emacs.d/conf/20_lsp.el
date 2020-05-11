@@ -1,3 +1,11 @@
+;;
+;; completion-at-point - display completion using built-in emacs completion-at-point framework.
+;;
+;; *vars*
+;; (defcustom lsp-enable-file-watchers t
+;; (defcustom lsp-file-watch-threshold 1000
+;;
+
 (el-get 'sync 'lsp-mode)
 (el-get 'sync 'lsp-ui)
 
@@ -9,7 +17,7 @@
   :ensure t
   :config
   (setq company-idle-delay 0.3)
-;  (global-set-key (kbd “C-<tab>”) ‘company-complete)
+;;  (global-set-key (kbd "C-<tab>") 'company-complete)
   (global-company-mode 1)
   )
 
@@ -19,6 +27,16 @@
   :config
   (setq lsp-prefer-flymake nil)
   :hook (php-mode . lsp)
+  :hook (golang-mode . lsp)
+  :hook (typescript-mode . lsp)
+  :bind
+  (:map lsp-mode-map
+        ("C-c C-j" . lsp-ui-peek-find-definitions)
+        ("C-c b"   . xref-pop-marker-stack)
+        ("C-c i"   . lsp-ui-peek-find-implementation)
+        ("C-c m"   . lsp-ui-imenu)
+        ("C-<tab>" . 'completion-at-point)
+        )
   :commands lsp)
 
 (use-package lsp-ui
