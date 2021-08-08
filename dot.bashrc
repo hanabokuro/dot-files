@@ -99,3 +99,5 @@ export GOPATH=$HOME/mygo
 for D in /usr/local/opt/python/libexec/bin /usr/local/bin /usr/local/sbin /usr/local/go/bin $HOME/bin $HOME/.nodebrew/current/bin; do
     [ -d "$D" ] && PATH=$D:$PATH
 done
+
+source $HOME/.cargo/env

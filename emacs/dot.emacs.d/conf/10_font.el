@@ -32,3 +32,17 @@
         (set-fontset-font fn 'katakana-jisx0201 `(,my-font-ja . ,rg))
         (set-fontset-font fn 'japanese-jisx0208 `(,my-font-ja . ,rg))
         (set-fontset-font fn 'japanese-jisx0212 `(,my-font-ja . ,rg))))))
+
+
+(let ((avairable-font-list (seq-filter (lambda (target-font-name) 
+                                         (seq-find (lambda (font-name) (equal target-font-name font-name))  (font-family-list))
+                                         )
+                                       '("xToppan Bunkyu Gothic" "Hiragino Maru Gothic Pro"))))
+  (when (car avairable-font-list) 
+    (set-face-attribute 'default nil
+                        :family (car avairable-font-list)
+                        :height 140)
+    (set-fontset-font
+     nil 'japanese-jisx0208
+     (font-spec :family (car avairable-font-list)))
+))
