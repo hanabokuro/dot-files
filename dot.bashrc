@@ -99,3 +99,5 @@ export PATH="$HOME/bin:$PATH"
 [ -f /Users/shmorimo/.travis/travis.sh ] && source /Users/shmorimo/.travis/travis.sh
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+source $HOME/.cargo/env

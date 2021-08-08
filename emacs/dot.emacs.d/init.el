@@ -78,7 +78,7 @@
  '(magit-fetch-arguments (quote ("--prune")) t)
  '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
  '(magit-merge-arguments (quote ("--no-ff")))
- '(package-selected-packages (quote (smart-compile)))
+ '(package-selected-packages (quote (rust-mode smart-compile)))
  '(safe-local-variable-values
    (quote
     ((dns-mode-soa-auto-increment-serial)

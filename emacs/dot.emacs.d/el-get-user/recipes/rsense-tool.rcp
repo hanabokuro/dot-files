@@ -2,11 +2,11 @@
  :type http-tar
  :options ("xzf")
  :description "A Ruby development tools for Emacs and Vim"
- :url "http://cx4a.org/pub/rsense/rsense-0.3.tar.bz2"
+;; :url "http://cx4a.org/pub/rsense/rsense-0.3.tar.bz2"
+ :url "https://github.com/rsense/rsense/archive/v0.5.18.tar.gz"
  :build `(
           ("chmod" "+x" "bin/rsense")
-          ("sh" "-c" ,(concat "ruby etc/config.rb > " (expand-file-name "~/.rsense")))
+;;          ("sh" "-c" ,(concat "ruby etc/config.rb > " (expand-file-name "~/.rsense")))
          )
  :load-path ("etc"))
 )
-
