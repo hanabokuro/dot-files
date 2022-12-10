@@ -82,7 +82,7 @@
 (display-time)
 
 ;; defaultのgrepコマンド
-(setq grep-command "ack -i -C 2 --nogroup --nocolor ")
+;(setq grep-command "ack -i -C 2 --nogroup --nocolor ")
 ;(setq grep-command "ack -i -C 2 --nogroup --nocolor --type-set c=.c,.h,.cc --type=perl ")
 ;(setq grep-command "ag -i --line-number --nogroup ")
 ;; コマンド末尾に /dev/null をつけない
