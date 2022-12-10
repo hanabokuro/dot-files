@@ -101,3 +101,4 @@ for D in /usr/local/opt/python/libexec/bin /usr/local/bin /usr/local/sbin /usr/l
 done
 
 source $HOME/.cargo/env
+. "$HOME/.cargo/env"

@@ -34,4 +34,4 @@ if [ -f '/Users/shigekimorimoto/Downloads/google-cloud-sdk/path.bash.inc' ]; the
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/shigekimorimoto/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/shigekimorimoto/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
-export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"

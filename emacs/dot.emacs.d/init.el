@@ -58,35 +58,27 @@
  '(cperl-indent-parens-as-block t)
  '(cperl-tab-always-indent t)
  '(display-time-mode t)
- '(eshell-ask-to-save-history (quote always))
+ '(eshell-ask-to-save-history 'always)
  '(eshell-cmpl-cycle-completions nil)
  '(eshell-hist-ignoredups t)
  '(eshell-history-size 1000)
  '(eshell-ls-exclude-regexp "~\\'")
  '(eshell-ls-initial-args "-h")
  '(eshell-modules-list
-   (quote
-    (eshell-alias eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-rebind eshell-script eshell-term eshell-unix eshell-xtra)))
+   '(eshell-alias eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-rebind eshell-script eshell-term eshell-unix eshell-xtra))
  '(eshell-stringify-t nil)
  '(eshell-term-name "ansi")
  '(eshell-visual-commands
-   (quote
-    ("vi" "vim" "top" "screen" "less" "lynx" "ssh" "rlogin" "telnet")))
- '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
+   '("vi" "vim" "top" "screen" "less" "lynx" "ssh" "rlogin" "telnet"))
+ '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)
  '(font-lock-maximum-decoration t)
  '(helm-ag-base-command "ack --nocolor --nogroup")
- '(magit-fetch-arguments (quote ("--prune")) t)
- '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
- '(magit-merge-arguments (quote ("--no-ff")))
-
+ '(magit-fetch-arguments '("--prune") t)
+ '(magit-log-arguments '("--graph" "--color" "--decorate" "-n256"))
+ '(magit-merge-arguments '("--no-ff"))
  '(package-selected-packages
-   (quote
-    (company typescript-mode typoscript-mode rust-mode smart-compile)))
-
- '(safe-local-variable-values
-   (quote
-    ((dns-mode-soa-auto-increment-serial)
-     (encoding . utf-8))))
+   '(company typescript-mode typoscript-mode rust-mode smart-compile))
+ '(safe-local-variable-values '((dns-mode-soa-auto-increment-serial) (encoding . utf-8)))
  '(show-paren-mode t))
 
 ; (load (expand-file-name "~/.emacs.d/slack.el"))
