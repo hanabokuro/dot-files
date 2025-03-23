@@ -5,6 +5,7 @@
  (magit-fetch nil)
  (magit-gitignore nil)
  (magit-log
+  ("-n256" "--graph" "--decorate")
   ("-n256" "--graph" "--color" "--decorate")
   ("-n512" "--graph" "--color" "--decorate")
   ("-n1024" "--grep=hot fix" "--graph" "--color" "--decorate")

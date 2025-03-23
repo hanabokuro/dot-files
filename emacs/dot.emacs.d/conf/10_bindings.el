@@ -15,6 +15,7 @@
 
 
 ;; custom key-binds
+(global-set-key "\C-xc" 'compile)
 (global-set-key "\C-j" 'dabbrev-expand)
 (global-set-key "\C-z" 'scroll-down)
 (global-set-key "\C-xg" 'grep)
