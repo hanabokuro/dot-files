@@ -96,7 +96,7 @@ export GOPATH=$HOME/mygo
 # added by travis gem
 [ -f /Users/shmorimo/.travis/travis.sh ] && source /Users/shmorimo/.travis/travis.sh
 
-for D in /usr/local/opt/python/libexec/bin /usr/local/bin /usr/local/sbin /usr/local/go/bin $HOME/bin $HOME/.nodebrew/current/bin; do
+for D in /usr/local/go/bin /usr/local/opt/python/libexec/bin /usr/local/bin /usr/local/sbin /usr/local/go/bin $HOME/bin $HOME/.nodebrew/current/bin /opt/homebrew/bin ; do
     [ -d "$D" ] && PATH=$D:$PATH
 done
 
