@@ -1,10 +1,19 @@
-;; ripgrepをデフォルトのgrepコマンドとして設定
-(setq grep-command "rg -H --no-heading --color=never ")
+;; rgをプロジェクトルートから実行する関数
+(defun rg-from-project-root ()
+  "Run ripgrep from the project root directory (.git directory location) or current directory."
+  (interactive)
+  (let* ((project-root (locate-dominating-file default-directory ".git"))
+         (default-directory (or project-root default-directory))
+         (grep-command "rg -H --no-heading --color=never "))
+    (call-interactively 'grep)
+    (with-current-buffer "*grep*"
+      (rename-buffer (format "*rg [%s]*" (file-name-nondirectory (directory-file-name default-directory)))))))
 
-;; ripgrepをgrepのプログラムとして設定
-(setq grep-program "rg")
+;; 標準のgrepコマンドをオーバーライド
+(advice-add 'grep :around
+            (lambda (orig-fun &rest args)
+              (let* ((project-root (locate-dominating-file default-directory ".git"))
+                     (default-directory (or project-root default-directory)))
+                (apply orig-fun args))))
 
-;; grepの初期化関数をフックする
-(with-eval-after-load 'grep
-  (grep-apply-setting 'grep-command "rg -H --no-heading --color=never ")
-  (grep-apply-setting 'grep-template "rg -H --no-heading --color=never <C> <F>"))
+(global-set-key (kbd "C-x g") 'rg-from-project-root)
