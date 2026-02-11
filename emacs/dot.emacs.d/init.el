@@ -8,6 +8,11 @@
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
+
+;; HOW TO INSTALL PACKAGES
+;; M-x list-packages
+
+
 (require 'eieio)
 ;; setup package.el
 (require 'package)
@@ -77,7 +82,7 @@
  '(magit-log-arguments '("--graph" "--color" "--decorate" "-n256"))
  '(magit-merge-arguments '("--no-ff"))
  '(package-selected-packages
-   '(company typescript-mode typoscript-mode rust-mode smart-compile))
+   '(haskell-mode company typescript-mode typoscript-mode rust-mode smart-compile))
  '(safe-local-variable-values '((dns-mode-soa-auto-increment-serial) (encoding . utf-8)))
  '(show-paren-mode t))
 
