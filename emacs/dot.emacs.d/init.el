@@ -10,15 +10,17 @@
 
 
 ;; HOW TO INSTALL PACKAGES
-;; M-x list-packages
+;; M-x el-get-installl
 
 
 (require 'eieio)
 ;; setup package.el
 (require 'package)
-(add-to-list 'package-archives '("melpa" .     "http://melpa.milkbox.net/packages/"))
+;; (add-to-list 'package-archives '("melpa" .     "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+
 
 ;; el-get
 ;
