@@ -1,3 +1,6 @@
+;;;  emacs 28 の情報で古いかも
+
+
 ;; test is read-only が出たら (setq inhibit-read-only t)
 
 ;; C-x <RETURN> c    文字コードを指定してファイルを開く
@@ -80,10 +83,6 @@
 ;; M-x bookmark-save
 ;;      Save all the current bookmark values in the default bookmark file.
 
-;; ================ w3m ================
-;; M-x w3m-print-this-url
-;;    copy url to kill-buffer
-
 ;; ================ git blame ================
 ;; C-x v g vc-switch-backend
 ;;
@@ -100,5 +99,3 @@
 ;; p               vc-annotate-prev-revision
 ;; v               vc-annotate-toggle-annotation-visibility
 ;; w               vc-annotate-working-revision
-
-

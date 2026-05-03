@@ -1,11 +1,21 @@
-(setq elscreen-prefix-key "\C-x\C-\\")
-(el-get 'sync 'elscreen)
-(require 'elscreen)
+;; elscreen は使わない
 
-(elscreen-start)
-(loop repeat 10 do (elscreen-create))
-(elscreen-goto 0)
+(use-package tab-bar
+  :ensure nil
+  :init
+  (tab-bar-mode 1)
+  :config
+  ;; --- 10個のタブ（スクリーン）を生成 ---
+  ;; すでに1つ目のタブは存在しているため、追加で9個作成します
+  (dotimes (_ 9)
+    (tab-new))
+  
+  ;; 最初のタブ（インデックス1）を選択した状態にする
+  (tab-bar-select-tab 1)
 
-(global-set-key [left]  'elscreen-previous)
-(global-set-key [right] 'elscreen-next)
-(global-set-key "\C-c0" '(lambda () (interactive) (elscreen-jump-0)))
+  ;; --- キーバインドの設定 ---
+  ;; カーソルキー（左右）でタブを移動
+  (keymap-global-set "<left>"  'tab-bar-switch-to-prev-tab)
+  (keymap-global-set "<right>" 'tab-bar-switch-to-next-tab)
+  
+  )

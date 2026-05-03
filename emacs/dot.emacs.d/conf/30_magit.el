@@ -88,37 +88,23 @@
 ;;
 ;;
 
-;;;; no idaa - dirty fix ;;;;
-(add-to-list 'load-path "~/.emacs.d/elpa/transient-20190304.2257")
-;;;; no idaa - dirty fix ;;;;
+(use-package magit
+  :ensure t
+  :bind (("C-&" . magit-status)) ; 以前のキーバインドを継承
+  :config
+  ;; --- コーディングシステムの設定 ---
+  (add-to-list 'process-coding-system-alist '("git" . (utf-8 . utf-8)))
 
-(el-get 'sync 'magit)
+  ;; --- フェッチ・トラッキングの設定 ---
+  ;; --prune をデフォルトにする（以前の設定を継承）
+  (setq magit-fetch-arguments '("--prune"))
+  ;; トラッキング名をブランチ名のみにする
+  (setq magit-default-tracking-name-function #'magit-default-tracking-name-branch-only)
 
-(global-set-key (kbd "C-&") 'magit-status)
-
-(setq magit-log-header-end "-- End of Magit header --\n")
-(setq magit-default-tracking-name-function `magit-default-tracking-name-branch-only)
-(setq magit-fetch-arguments (quote ("--prune")))
-
-; (add-to-list 'process-coding-system-alist '("git" . (euc-jp . euc-jp))); for v1.0
-(add-to-list 'process-coding-system-alist '("git" . (utf-8 . utf-8)))
-
-; (setq magit-diff-options '("--word-diff"))
-; (setq magit-diff-options '("--word-diff" "--color-words"))
-
-;; vi-git.el is too old. need modify to run git annotate.
-(defun my-magit-mode-hook-function ()
-  (defun vc-git-annotate-command (file buf &optional rev)
-    ;; FIXME: rev is ignored
-    (let ((name (file-relative-name file)))
-      (vc-git-command buf 0 name "blame" rev)))
-)
-; (add-hook 'magit-mode-hook 'my-magit-mode-hook-function)
-
-(defun my-magit-reset-process ()
-  (interactive)
-  (and magit-process (process-kill-without-query magit-process))
-  (and (get-buffer magit-process-buffer-name)
-       (kill-buffer (get-buffer magit-process-buffer-name)))
-  (setq magit-process nil)
-)
+  ;; --- プロセスのリセット（現代版） ---
+  ;; 以前の my-magit-reset-process に相当する機能は magit-process-kill で可能です
+  (defun my/magit-soft-reset ()
+    (interactive)
+    (when (get-buffer magit-process-buffer-name)
+      (magit-process-kill)
+      (message "Magit process killed."))))
